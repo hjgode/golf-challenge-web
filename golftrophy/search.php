@@ -1,6 +1,7 @@
 <html>
 <body>
 <head>
+<meta name="viewport" content="width=240, initial-scale=2, maximum-scale=2, minimum-scale=2">
 <META name="HandheldFriendly" content="True">
 <title>Golf Trophy - Suchen</title>
 </head>

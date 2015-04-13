@@ -1,4 +1,7 @@
 <html>
+<head>
+<meta name="viewport" content="width=240, initial-scale=2, maximum-scale=2, minimum-scale=2">
+</head>
 <body>
 <h2><a href="index.html">Golf Trophy</a></h2>
 <h3>Datenänderung</h3>
