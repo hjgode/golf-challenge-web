@@ -1,4 +1,4 @@
-a web based golf trophy scoring app
+# a web based golf trophy scoring app
 
 used on "ApacheFriends XAMPP Mini for windows Version 1.3 (09.02.2004)"
 
@@ -6,48 +6,86 @@ added <meta name="viewport" content="width=240, initial-scale=2, maximum-scale=2
 to all pages (except results, which are intended to run a large screen) to make it mobile friendly for
 screens with more than 240x320 screen.
 
-german installation description
+# Installation
+This web application was written for minixampp 1.3 on windows
 
-Installationsanleitung für "Golf Event 2005"(GE2)
+It enables you you track longest and shortest flights on a golf track.
 
-_______________Komplett-Install:___________________
-Das Zip Golf2005-minixampp.zip enthält alle erforderlichen Dateien und sollte MIT Verzeichnissen nach C:\ entpackt werden. Danach hat man ein lauffähiges System unterhalb von c:\minixampp.
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/start-page.gif) 
 
-_______________Manuelle Installation_______________
-Als erstes muss auf einem Windows-Rechner minixampp installiert werden. Während der Entwicklung wurde die Version "minixampp-win32-1.3.zip" verwendet.
+You may import and use some testdata, see file testdaten.dat.
 
-Nach der Installation des Apache Webservers mit MySql und PHP muss die Batchdatei "setup_xampp.bat" im Installationsverzeichnis (normalerweise "C:\minixampp") einmal ausgeführt werden.
+After you point your mobile browser to the main web page, you can select a flight and edit the nearest and shortest flight.
 
-Die Dateien von GE2 sollten alle in das Verzeichnis "C:\minixampp\htdocs\golf2005" kopiert werden.
-Nun müssen die php.ini und die httpd.conf angepasst werden. 
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/select-flight.gif) 
 
-httpd.conf
-Öffnen Sie als erstes die Datei httpd.conf im Verzeichnis "C:\minixampp\apache\conf" mit einem Texteditor. Suchen Sie nach der Zeile "DocumentRoot..." und ändern Sie sie so, dass sie wie folgt lautet und auf das Home-Verzeichnis von GE2 zeigt:
-DocumentRoot "C:/minixampp/htdocs/golf2005"
-Ändern Sie auch die Zeile "<Directory... wie nachfolgend
-<Directory "C:/minixampp/htdocs/golf2005">
+Just click on the numbers to change the distance.
 
-Durch dies Änderungen wird die index-Seite von GE2 zur Standardseite beim Zugriff auf den Webserver auf dem Windows PC.
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/change-both.gif) 
 
-php.ini
-Achtung es exisitieren zwei Dateien php.ini. Öffnen und ändern Sie die php.ini im Verzeichnis "C:\minixampp\apache\bin". Suchen Sie nach der Zeile mit "extension=php_printer.dll" und entfernen Sie ein eventuell am Anfang stehendes ";", damit die Zeile aktiv wird. Die Erweiterung php_printer.dll wird zum Drucken benötigt.
+There is a search option to find a player, just click on "Suchen" in the main page
 
-___________________ Drucken _______________________
-Die Druckfunktion in GE2 basiert auf einem beliebigen auf dem Windows PC unter dem Freigabenamen "golf2004" freigegebenen Drucker. Alle Druckaufträge aus GE2 verwenden den Freigabenamen "golf2004". Wenn diese Druckerfreigabe nicht existiert, ist kein Ausdruck möglich.
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/suchen.gif) 
 
-___________________ Start der Server ______________
-Starten der Anwendung
-Zum Starten klicken Sie im Verzeichnis "C:\minixampp" zuerst doppelt auf "apache_start.bat" und dann auf "mysql_start.bat". Zum Beenden können Sie erst auf "mysql_stop.bat" doppelt klicken und dann das Kommando-Fenster von apache_start schliessen.
+If you do not enter any pattern and just click [Suchen] you get a list with all players.
 
-___________________ Administration ________________
-Wenn der Windows PC die IP-Adresse 192.168.0.1 hat, kann man im Internet Explorer oder einem anderen Webbrowser über die URL http://192.168.0.1 auf die Webseiten von GE2 zugreifen.
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/suchen-all.gif) 
 
-___________________ PHP Druck Modul aktivieren ________________
-Achtung: In der php.ini im Verzeichnis 
+If you click a name of a player, the list with the team players is shown:
 
-C:\minixampp\apache\bin 
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/team.gif) 
 
-eine Zeile freigeben:
+Now you print the score card for the team by clicking the "Drucken" link.
 
-statt: ";extension=php_printer.dll"
-muss : "extension=php_printer.dll"
+The print function uses a windows shared printer named "golftrophy" on the windows PC. This must be pre-created manually to be able to use the print function.
+
+The system was used with mobile devices taken by a team connected to the server via wireless LAN.
+
+On the other side the actual results where displayed in the club house automatically for all male and female players.
+
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/results.gif) 
+
+There is also an integrated admin page to enter the names of the players in the teams.
+
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/admin1.gif) 
+
+There is an option to show all data only (Daten anzeigen) or to edit the data. These pages are best to be used from a larger desktop web browser.
+
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/admin-showdata.gif) 
+
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/admin-editdata.gif) 
+
+In "Daten Ã¤ndern" you can edit, delete and insert data.
+
+The edit window:
+
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/admin-data-edit.gif) 
+
+The delete function will show another delete window to let you confirm the delete:
+
+![](https://github.com/hjgode/golf-challenge-web/raw/master/doc/admin-data-del1.gif) 
+
+The last option of the admin main page ("Die Ergebnisse") is to show the actual results, separate for male and female players. The display will refresh periodically and toggles between the male and female results page.
+
+The results are sorted by nearest low and longest high values.
+
+#Installation
+
+## Full
+
+there is a full install including minixampp inside GolfTrophy(2006).zip. Just unpack the zip to "c:\minixampp" and then start apache_start.bat and mysql_start.bat in separate cmd windows.
+
+## Manual
+
+- download minixampp for 
+windows or linux
+- setup minixampp by starting setup_xampp.bat
+- copy all ./golftrophy files to the htdocs dir into a new golftrophy directory.
+- edit httpd.conf in apache\conf of your minixampp dir: The DocumentRoot dir needs to be changed to the golftrophy dir. Change the Directory entry to point to c:/minixampp/htdocs/golftrophy too.
+- edit "C:\minixampp\apache\bin\php.ini" and enable php_printer by removing a leading ";". There should be a copy of php_printer.dll in php/extensions folder.
+- create a windows printer share named "golftrophy" on the Windows PC.
+
+### Start the web server
+
+Double click apache_start.bat and mysql_start.bat in your minixampp installation.
+

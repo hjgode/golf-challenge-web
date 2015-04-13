@@ -87,7 +87,7 @@ header("Pragma: no-cache");?>
    for ($i=0; $i<=$max; $i++)
    {
 //block links Longest ($num)
-	if($num != 0)
+	if($num != 0 and $i<$num)
 	{
       $id = mysql_result($res, $i, "id");
       $fl = mysql_result($res, $i, "Flight");
@@ -108,7 +108,7 @@ header("Pragma: no-cache");?>
       $lo = "";
 	}
 //block rechts Nearest ($num1)
-	if($num1 != 0)
+	if($num1 != 0 and $i<$num1)
 	{
       $id1 = mysql_result($res1, $i, "id");
       $fl1 = mysql_result($res1, $i, "Flight");
