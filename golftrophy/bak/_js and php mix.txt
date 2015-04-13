@@ -1,0 +1,55 @@
+Client-side Javascript can be sent to the user along with your html.
+
+For Example:
+
+echo ("<HTML><HEAD>\n");
+echo ("<SCRIPT TYPE=\"text/javascript\">\n");
+echo ("<!--\n";
+echo ("function hello() {\n");
+echo ("  alert('Hi');\n");
+echo ("}\n");
+echo ("// -->\n");
+echo ("</SCRIPT>\n");
+
+and so on...
+
+The client is then sent:
+
+<HTML><HEAD>
+<SCRIPT TYPE=\"text/javascript\">
+<!--
+function hello() {
+   alear('Hi');
+}
+// -->
+</SCRIPT>
+========================================================================================
+Yes, it is possible to mix PHP and JavaScript, for example:
+
+var givemeaphpvalue = <?php echo $phpvalue; ?>;
+
+========================================================================================
+Since PHP is server-side you can write javascript dynamically on the fly
+which are then executed client-side.
+Here's a simple example:
+
+<!-- yourpage.php-->
+<script language="Javascript">
+var today = '<?php echo date("Y-m-d", time()); ?>';
+
+</script>
+
+========================================================================================
+Javascript will allow you to do dynamic stuff, but if you are looking 
+for aesthetics you would be better off learning style sheets. CSS is 
+much more efficient than javascript. You can actually simulate buttons, 
+borders and lots of other stuff by just using CSS. And if you get good 
+at CSS, you can even create themes for your website.
+
+For instance, adding this simple code in the <HEAD> of your web page 
+will cause links to change to a yellow background when the mouse is over 
+the link.
+
+<style type="text/css" media="Screen">
+a:hover {background-color: yellow};
+</style>

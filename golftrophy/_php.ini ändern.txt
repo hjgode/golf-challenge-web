@@ -1,0 +1,8 @@
+Achtung: In der php.ini im Verzeichnis 
+
+C:\minixampp\apache\bin 
+
+eine Zeile freigeben:
+
+statt: ";extension=php_printer.dll"
+muss : "extension=php_printer.dll"

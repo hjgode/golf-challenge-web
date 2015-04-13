@@ -1,0 +1,16 @@
+Probably the easiest way to do this would be to fetch the primary key from the database in your query. Maybe you have an auto_increment ID column or something? If you do, you could construct your edit and delete links something like:
+
+[php]
+*snip*
+echo "<tr align='center'><td height='30'><a href='edit.php?ID=$row["IDColumnName"]'>edit</a> <a href='delete.phpID=$row["IDColumnName"]'>delete</a></td><td>";
+*snip*
+[/php]
+
+Doing so, in your edit.php and delete.php scripts, you could capture the ID from the query string something like:
+
+[php]
+$recordID = $_GET['ID'];
+[/php]
+
+And then you would have the record identifier to perform the edit or delete on.
+

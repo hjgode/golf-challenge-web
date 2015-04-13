@@ -1,0 +1,116 @@
+# phpMyAdmin SQL Dump
+# version 2.5.5-pl1
+# http://www.phpmyadmin.net
+#
+# Host: localhost
+# Erstellungszeit: 07. Mai 2005 um 15:09
+# Server Version: 4.0.17
+# PHP-Version: 4.3.4
+# 
+# Datenbank: `golfer2005`
+# 
+DROP DATABASE `golfer2005`;
+CREATE DATABASE `golfer2005`;
+USE golfer2005;
+
+# --------------------------------------------------------
+
+#
+# Tabellenstruktur für Tabelle `golfer`
+#
+
+DROP TABLE IF EXISTS `golfer`;
+CREATE TABLE `golfer` (
+  `id` int(11) NOT NULL auto_increment,
+  `Tee` enum('1','10') NOT NULL default '1',
+  `Startzeit` time NOT NULL default '13:00:00',
+  `Flight` enum('01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26') NOT NULL default '01',
+  `Name` varchar(80) NOT NULL default '',
+  `Geschlecht` enum('M','W') NOT NULL default 'M',
+  `Nearest` float NOT NULL default '0',
+  `Longest` float NOT NULL default '0',
+  `DGV` text NOT NULL,
+  `Tu` text NOT NULL,
+  PRIMARY KEY  (`id`),
+  KEY `Flight` (`Flight`,`Name`)
+) TYPE=MyISAM AUTO_INCREMENT=77 ;
+
+#
+# Daten für Tabelle `golfer`
+#
+
+INSERT INTO `golfer` VALUES (74, '10', '00:00:00', '01', 'Müller', 'M', '0', '0', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (2, '10', '00:00:00', '01', 'Name0102W', 'W', '2.5', '71.9', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (73, '1', '00:00:00', '01', 'name01w', 'M', '0', '0', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (4, '10', '00:00:00', '01', 'Name0104W', 'W', '4.6', '69.7', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (5, '1', '00:00:00', '02', 'Meier', 'M', '5', '68.5', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (6, '10', '00:00:00', '02', 'Name0206W', 'W', '6', '67', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (7, '1', '00:00:00', '02', 'Name0207M', 'M', '7', '66', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (8, '10', '00:00:00', '02', 'Name0208W', 'W', '8.9', '65.8', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (9, '1', '00:00:00', '03', 'Name0309M', 'M', '98.9', '64', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (10, '10', '00:00:00', '03', 'Mayer', 'W', '10', '63', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (11, '1', '00:00:00', '03', 'Name0311M', 'M', '11', '62', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (12, '10', '00:00:00', '03', 'Name0312W', 'W', '12', '61', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (13, '1', '00:00:00', '04', 'Name0413M', 'M', '13.6', '60', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (14, '10', '00:00:00', '04', 'Name0414W', 'W', '14', '59', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (15, '1', '00:00:00', '04', 'Name0415M', 'M', '15', '58', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (16, '10', '00:00:00', '04', 'Maier', 'W', '16', '57', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (17, '1', '00:00:00', '05', 'Name0517M', 'M', '17.5', '56', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (18, '10', '00:00:00', '05', 'Myller', 'W', '18', '55', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (19, '1', '00:00:00', '05', 'Name0519M', 'M', '19', '54', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (20, '10', '00:00:00', '05', 'Name0520W', 'W', '20', '53', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (21, '1', '00:00:00', '06', 'Name0621M', 'M', '21', '52', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (22, '10', '00:00:00', '06', 'Name0622W', 'W', '22', '51', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (23, '1', '00:00:00', '06', 'Name0623M', 'M', '23', '50', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (24, '10', '00:00:00', '06', 'Name0624W', 'W', '24', '49', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (25, '1', '00:00:00', '07', 'Name0725M', 'M', '25', '48', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (26, '10', '00:00:00', '07', 'Name0726W', 'W', '26', '47', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (27, '1', '00:00:00', '07', 'Meyer', 'M', '27', '46', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (28, '10', '00:00:00', '07', 'Name0728W', 'W', '28', '45', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (29, '1', '00:00:00', '08', 'Name0829M', 'M', '29', '44.44', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (30, '10', '00:00:00', '08', 'Name0830W', 'W', '30', '43', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (31, '1', '00:00:00', '08', 'Name0831M', 'M', '31', '42', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (32, '10', '00:00:00', '08', 'Name0832W', 'W', '32', '41', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (33, '1', '00:00:00', '09', 'Name0933M', 'M', '33', '40', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (34, '10', '00:00:00', '09', 'Name0934W', 'W', '34', '39', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (35, '1', '00:00:00', '09', 'Name0935M', 'M', '35', '38', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (36, '10', '00:00:00', '09', 'Name0936W', 'W', '36', '37', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (37, '1', '00:00:00', '10', 'Name1037M', 'M', '37', '36', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (38, '10', '00:00:00', '10', 'Name1038W', 'W', '38', '35', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (39, '1', '00:00:00', '10', 'Name1039M', 'M', '39', '34', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (40, '10', '00:00:00', '10', 'Name1040W', 'W', '40', '33', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (41, '1', '00:00:00', '11', 'Name1141M', 'M', '41', '32', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (42, '10', '00:00:00', '11', 'Name1142W', 'W', '42', '31', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (43, '1', '00:00:00', '11', 'Name1143M', 'M', '43', '30', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (44, '10', '00:00:00', '11', 'Name1144W', 'W', '44', '29', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (45, '1', '00:00:00', '12', 'Name1245M', 'M', '45', '28', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (46, '10', '00:00:00', '12', 'Name1246W', 'W', '46', '27', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (47, '1', '00:00:00', '12', 'Name1247M', 'M', '47', '26', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (48, '10', '00:00:00', '12', 'Name1248W', 'W', '48', '25', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (49, '1', '00:00:00', '13', 'Name1349M', 'M', '49', '24', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (50, '10', '00:00:00', '13', 'Name1350W', 'W', '50', '23', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (51, '1', '00:00:00', '13', 'Name1351M', 'M', '51', '22', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (52, '10', '00:00:00', '13', 'Name1352W', 'W', '52', '21', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (53, '1', '00:00:00', '14', 'Name1453M', 'M', '53', '20', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (54, '10', '00:00:00', '14', 'Name1454W', 'W', '54', '19', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (55, '1', '00:00:00', '14', 'Name1455M', 'M', '55', '18', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (56, '10', '00:00:00', '14', 'Name1456W', 'W', '56', '17', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (57, '1', '00:00:00', '15', 'Name1557M', 'M', '57', '16', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (58, '10', '00:00:00', '15', 'Name1558W', 'W', '58', '15', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (59, '1', '00:00:00', '15', 'Name1559M', 'M', '59', '14', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (60, '10', '00:00:00', '15', 'Name1560W', 'W', '60', '13', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (61, '1', '00:00:00', '16', 'Name1661M', 'M', '61', '12', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (62, '10', '00:00:00', '16', 'Name1662W', 'W', '62', '11', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (63, '1', '00:00:00', '16', 'Name1663M', 'M', '63', '10', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (64, '10', '00:00:00', '16', 'Name1664W', 'W', '64', '9', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (65, '1', '00:00:00', '17', 'Name1765M', 'M', '65', '8', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (66, '10', '00:00:00', '17', 'Name1766W', 'W', '66', '7', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (67, '1', '00:00:00', '17', 'Name1767M', 'M', '67', '6', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (68, '10', '00:00:00', '17', 'Name1768W', 'W', '68', '5', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (69, '1', '00:00:00', '18', 'Name1869M', 'M', '69', '4', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (70, '10', '00:00:00', '18', 'Mehl', 'W', '70', '3', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (71, '1', '00:00:00', '18', 'Name1871M', 'M', '71', '2', '25,3', '11.1');
+INSERT INTO `golfer` VALUES (72, '10', '00:00:00', '24', 'Name1872W', 'W', '72', '1', '12,5', '11.1');
+INSERT INTO `golfer` VALUES (75, '1', '13:00:00', '26', 'kljhklj', 'M', '0', '0', '', '');
+INSERT INTO `golfer` VALUES (76, '10', '13:00:00', '23', 'Gode, Heinz-Josef', 'M', '0', '0', '11,1', '22,2');
+    

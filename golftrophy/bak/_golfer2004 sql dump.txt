@@ -1,0 +1,133 @@
+# phpMyAdmin SQL Dump
+# version 2.5.5-pl1
+# http://www.phpmyadmin.net
+#
+# Host: localhost
+# Erstellungszeit: 10. Mai 2005 um 14:08
+# Server Version: 4.0.17
+# PHP-Version: 4.3.4
+# 
+# Datenbank: `golfer2005`
+# 
+
+# --------------------------------------------------------
+
+#
+# Tabellenstruktur für Tabelle `golfer`
+#
+
+DROP TABLE IF EXISTS `golfer`;
+CREATE TABLE `golfer` (
+  `id` int(11) NOT NULL auto_increment,
+  `Tee` enum('01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18') NOT NULL default '01',
+  `Startzeit` time NOT NULL default '13:00:00',
+  `Flight` enum('01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26') NOT NULL default '01',
+  `Name` varchar(80) NOT NULL default '',
+  `Geschlecht` enum('M','W','-') NOT NULL default '-',
+  `Nearest` float NOT NULL default '0',
+  `Longest` float NOT NULL default '0',
+  `DGV` text NOT NULL,
+  `Tu` text NOT NULL,
+  PRIMARY KEY  (`id`)
+) TYPE=MyISAM AUTO_INCREMENT=97 ;
+
+#
+# Daten für Tabelle `golfer`
+#
+
+INSERT INTO `golfer` VALUES (1, '01', '10:30:00', '01', 'Seeler, Uwe', 'M', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (2, '01', '10:30:00', '01', 'Wollschläger, Arnim', 'M', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (3, '01', '10:30:00', '01', 'Reichert, Volker', 'M', '0', '0', '28,0', '-');
+INSERT INTO `golfer` VALUES (4, '01', '10:30:00', '01', 'Hiddessen, Willi', 'M', '10', '20', '13,6', '-');
+INSERT INTO `golfer` VALUES (5, '02', '10:30:00', '02', 'Born, Jürgen', 'M', '0', '0', '36,0', '-');
+INSERT INTO `golfer` VALUES (6, '02', '10:30:00', '02', 'Bruss, Regina', 'M', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (7, '02', '10:30:00', '02', 'Schröder, Joachim', 'M', '0', '0', '23,2', '-');
+INSERT INTO `golfer` VALUES (8, '02', '10:30:00', '02', 'Mönch, Jochen', 'M', '0', '0', '21,8', '-');
+INSERT INTO `golfer` VALUES (9, '03', '10:30:00', '03', 'Schulz, Willi', 'M', '0', '0', '13,5', '-');
+INSERT INTO `golfer` VALUES (10, '03', '10:30:00', '03', 'Rusch, Christian', 'M', '0', '0', '19,0', '-');
+INSERT INTO `golfer` VALUES (11, '03', '10:30:00', '03', 'Böker, Reinhard', 'M', '0', '0', '14,0', '-');
+INSERT INTO `golfer` VALUES (12, '03', '10:30:00', '03', 'Von Büllesheim, Ingrid', 'W', '10', '10', '15,7', '-');
+INSERT INTO `golfer` VALUES (13, '04', '10:30:00', '04', 'Reinders, Uwe', 'M', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (14, '04', '10:30:00', '04', 'Janssen, Claudia', 'W', '0', '0', '37,0', '-');
+INSERT INTO `golfer` VALUES (15, '04', '10:30:00', '04', 'Lorenz, Philipp', 'M', '0', '0', '54,0', '-');
+INSERT INTO `golfer` VALUES (16, '04', '10:30:00', '04', 'Zimmer, Uwe', 'M', '0', '0', '19,2', '-');
+INSERT INTO `golfer` VALUES (17, '05', '10:30:00', '05', 'Schramm, Norbert', 'M', '0', '0', '17,8', '-');
+INSERT INTO `golfer` VALUES (18, '05', '10:30:00', '05', 'Strathmann, Ulrike', 'W', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (19, '05', '10:30:00', '05', 'Rusch-Kiening, Prof. Lydia', 'W', '0', '0', '48,0', '-');
+INSERT INTO `golfer` VALUES (20, '05', '10:30:00', '05', 'Böker, Rita', 'W', '0', '0', '22,2', '-');
+INSERT INTO `golfer` VALUES (21, '06', '10:30:00', '06', 'Wontorra, Jörg', 'M', '0', '0', '26,8', '-');
+INSERT INTO `golfer` VALUES (22, '06', '10:30:00', '06', 'Weinert, Robert', 'M', '0', '0', '27,7', '-');
+INSERT INTO `golfer` VALUES (23, '06', '10:30:00', '06', 'Baca, Prof. Dr.Ivo', 'M', '0', '0', '27,0', '-');
+INSERT INTO `golfer` VALUES (24, '06', '10:30:00', '06', 'Lindhorst, Ute', 'W', '0', '0', '16,7', '-');
+INSERT INTO `golfer` VALUES (25, '07', '10:30:00', '07', 'Bruchhagen, Heribert', 'M', '0', '0', '13,0', '-');
+INSERT INTO `golfer` VALUES (26, '07', '10:30:00', '07', 'Müller, Bernd C.W.', 'M', '0', '0', '7,5', '-');
+INSERT INTO `golfer` VALUES (27, '07', '10:30:00', '07', 'Hölzenbein, Jutta', 'W', '0', '0', '31,4', '-');
+INSERT INTO `golfer` VALUES (28, '07', '10:30:00', '07', 'Schulz, Ingred', 'W', '0', '0', '27,1', '-');
+INSERT INTO `golfer` VALUES (29, '08', '10:30:00', '08', 'Seeler, Ilka', 'W', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (30, '08', '10:30:00', '08', 'Hiddessen, Inge', 'W', '0', '0', '26,0', '-');
+INSERT INTO `golfer` VALUES (31, '08', '10:30:00', '08', 'Gehle, Eda', 'W', '0', '0', '28,0', '-');
+INSERT INTO `golfer` VALUES (32, '08', '10:30:00', '08', 'Krebs-Schröder, Angelika', 'W', '0', '0', '31,8', '-');
+INSERT INTO `golfer` VALUES (33, '09', '10:30:00', '09', 'Holdorf, Willi', 'M', '0', '0', '24,0', '-');
+INSERT INTO `golfer` VALUES (34, '09', '10:30:00', '09', 'Huhs, Manfred', 'M', '0', '0', '32,9', '-');
+INSERT INTO `golfer` VALUES (35, '09', '10:30:00', '09', 'Sachse, Barbara', 'W', '0', '0', '23,3', '-');
+INSERT INTO `golfer` VALUES (36, '09', '10:30:00', '09', 'Weinert, Ingeborg', 'W', '0', '0', '32,2', '-');
+INSERT INTO `golfer` VALUES (37, '10', '10:30:00', '10', 'Bode, Marco', 'M', '0', '0', '25,0', '-');
+INSERT INTO `golfer` VALUES (38, '10', '10:30:00', '10', 'Van Rijn, Maurice', 'M', '0', '0', '36,0', '-');
+INSERT INTO `golfer` VALUES (39, '10', '10:30:00', '10', 'Irmer, Lothar', 'M', '0', '0', '21,0', '-');
+INSERT INTO `golfer` VALUES (40, '10', '10:30:00', '10', 'Manke, Andreas', 'M', '0', '0', '14,0', '-');
+INSERT INTO `golfer` VALUES (41, '11', '10:30:00', '11', 'Hölzenbein, Bernd', 'M', '0', '0', '16,3', '-');
+INSERT INTO `golfer` VALUES (42, '11', '10:30:00', '11', 'Fechter, Kurt', 'M', '0', '0', '18,5', '-');
+INSERT INTO `golfer` VALUES (43, '11', '10:30:00', '11', 'Erdinger, ????????', 'M', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (44, '11', '10:30:00', '11', 'Grundmann, Rainer', 'M', '0', '0', '54,0', '-');
+INSERT INTO `golfer` VALUES (45, '12', '10:30:00', '12', 'Otten, Jonny', '-', '0', '0', '36,0', '-');
+INSERT INTO `golfer` VALUES (46, '12', '10:30:00', '12', 'Wassermann, Werner', 'M', '0', '0', '14,0', '-');
+INSERT INTO `golfer` VALUES (47, '12', '10:30:00', '12', 'Grützner, Klaus', 'M', '0', '0', '23,4', '-');
+INSERT INTO `golfer` VALUES (48, '12', '10:30:00', '12', 'Bünger, Josef', 'M', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (49, '13', '10:30:00', '13', 'Allofs, Klaus', 'M', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (50, '13', '10:30:00', '13', 'Bruck, Paul', 'M', '0', '0', '21,1', '-');
+INSERT INTO `golfer` VALUES (51, '13', '10:30:00', '13', 'Stadtlander, Franz', 'M', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (52, '13', '10:30:00', '13', 'Carl, Ursula', 'W', '0', '0', '12,2', '-');
+INSERT INTO `golfer` VALUES (53, '14', '10:30:00', '14', 'Rüssmann, Rolf', 'M', '0', '0', '12,5', '-');
+INSERT INTO `golfer` VALUES (54, '14', '10:30:00', '14', 'Gramlow, Günter', 'M', '0', '0', '12,3', '-');
+INSERT INTO `golfer` VALUES (55, '14', '10:30:00', '14', 'Köhler, Klaus', 'M', '0', '0', '27,9', '-');
+INSERT INTO `golfer` VALUES (56, '14', '10:30:00', '14', 'Fischer, Ingo', 'M', '0', '0', '20,6', '-');
+INSERT INTO `golfer` VALUES (57, '15', '10:30:00', '15', 'Baumgart, Klaus', 'M', '0', '0', '32,0', '-');
+INSERT INTO `golfer` VALUES (58, '15', '10:30:00', '15', 'Bausch, Susanne', 'W', '0', '0', '24,4', '-');
+INSERT INTO `golfer` VALUES (59, '15', '10:30:00', '15', 'Winkelvoss, Birger', 'W', '0', '0', '16,9', '-');
+INSERT INTO `golfer` VALUES (60, '15', '10:30:00', '15', 'Budelmann, Holger', 'M', '0', '0', '10,0', '-');
+INSERT INTO `golfer` VALUES (61, '16', '10:30:00', '16', 'Müller, Luggi', 'M', '0', '0', '17,2', '-');
+INSERT INTO `golfer` VALUES (62, '16', '10:30:00', '16', 'Mönch, Christine', 'W', '0', '0', '20,6', '-');
+INSERT INTO `golfer` VALUES (63, '16', '10:30:00', '16', 'Dittrich, Sabine', 'W', '0', '0', '36,0', '-');
+INSERT INTO `golfer` VALUES (64, '16', '10:30:00', '16', 'Deiterding, Rolf', 'M', '0', '0', '23,3', '-');
+INSERT INTO `golfer` VALUES (65, '17', '10:30:00', '17', 'Zimmer, Werner', 'M', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (66, '17', '10:30:00', '17', 'Clavey, Lothar', 'M', '0', '0', '11,0', '-');
+INSERT INTO `golfer` VALUES (67, '17', '10:30:00', '17', 'Waldmann, Heide', 'W', '0', '0', '40,0', '-');
+INSERT INTO `golfer` VALUES (68, '17', '10:30:00', '17', 'Heinrich, Wera', 'W', '0', '0', '36,0', '-');
+INSERT INTO `golfer` VALUES (69, '18', '10:30:00', '18', 'Köster, Roman', 'M', '0', '0', '14,0', '-');
+INSERT INTO `golfer` VALUES (70, '18', '10:30:00', '18', 'Clavey, Ralf', 'M', '0', '0', '24,0', '-');
+INSERT INTO `golfer` VALUES (71, '18', '10:30:00', '18', 'Sachse, Horst', 'M', '0', '0', '10,3', '-');
+INSERT INTO `golfer` VALUES (72, '18', '10:30:00', '18', 'Mensing, Dieter', 'M', '0', '0', '25,4', '-');
+INSERT INTO `golfer` VALUES (73, '01', '10:30:00', '19', 'Zembski, Dieter', 'M', '0', '0', '21,5', '-');
+INSERT INTO `golfer` VALUES (74, '01', '10:30:00', '19', 'Schwarte, Günther', 'M', '0', '0', '26,5', '-');
+INSERT INTO `golfer` VALUES (75, '01', '10:30:00', '19', 'Großevehnhaus, Ferdi', 'M', '0', '0', '20,0', '-');
+INSERT INTO `golfer` VALUES (76, '01', '10:30:00', '19', 'Schramm, Ralf', 'M', '0', '0', '29,6', '-');
+INSERT INTO `golfer` VALUES (77, '02', '10:30:00', '20', 'Franke, Andreas', 'M', '0', '0', '54,0', '-');
+INSERT INTO `golfer` VALUES (78, '02', '10:30:00', '20', 'Bendt, Klaus', 'M', '0', '0', '26,9', '-');
+INSERT INTO `golfer` VALUES (79, '02', '10:30:00', '20', 'Lindhorst, Herbert', 'M', '0', '0', '26,5', '-');
+INSERT INTO `golfer` VALUES (80, '02', '10:30:00', '20', 'Hoppe, Heinke', 'M', '0', '0', '16,4', '-');
+INSERT INTO `golfer` VALUES (81, '03', '10:30:00', '21', 'Gruber, Rigobert', 'M', '0', '0', '18,4', '-');
+INSERT INTO `golfer` VALUES (82, '03', '10:30:00', '21', 'Müller, Margot', 'W', '0', '0', '32,5', '-');
+INSERT INTO `golfer` VALUES (83, '03', '10:30:00', '21', 'Hoppe, Volker', 'M', '0', '0', '9,8', '-');
+INSERT INTO `golfer` VALUES (84, '03', '10:30:00', '21', 'Waldmann, Horst', 'M', '0', '0', '41,0', '-');
+INSERT INTO `golfer` VALUES (85, '04', '10:30:00', '22', 'Nogly, Peter', 'M', '0', '0', '15,1', '-');
+INSERT INTO `golfer` VALUES (86, '04', '10:30:00', '22', 'Kubitza, Matthias', 'M', '0', '0', '26,7', '-');
+INSERT INTO `golfer` VALUES (87, '04', '10:30:00', '22', 'Dittrich, Frank', 'M', '0', '0', '35,4', '-');
+INSERT INTO `golfer` VALUES (88, '04', '10:30:00', '22', 'Henning, Peter', 'M', '0', '0', '33,0', '-');
+INSERT INTO `golfer` VALUES (89, '10', '10:30:00', '23', 'Bähre, Harry', 'M', '0', '0', '28,0', '-');
+INSERT INTO `golfer` VALUES (90, '10', '10:30:00', '23', 'Janssen, Harald', 'M', '0', '0', '27,6', '-');
+INSERT INTO `golfer` VALUES (91, '10', '10:30:00', '23', 'Cronau, Hartmut', 'M', '0', '0', '19,5', '-');
+INSERT INTO `golfer` VALUES (92, '10', '10:30:00', '23', 'Behnke, Dietrich', 'M', '0', '0', '25,8', '-');
+INSERT INTO `golfer` VALUES (93, '11', '10:30:00', '24', 'Schulz, Hans', 'M', '0', '0', '27,1', '-');
+INSERT INTO `golfer` VALUES (94, '11', '10:30:00', '24', 'Stadtlander, Dorit', 'W', '0', '0', '-', '-');
+INSERT INTO `golfer` VALUES (95, '11', '10:30:00', '24', 'Socher, Alexander', 'M', '0', '0', '26,0', '-');
+INSERT INTO `golfer` VALUES (96, '11', '10:30:00', '24', 'Heinrich, Hans-Jürgen', 'M', '0', '0', '22,0', '-');

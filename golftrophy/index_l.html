@@ -1,0 +1,34 @@
+<html>
+<head>
+<title>Intermec - Golf Trophy</title>
+<script type="text/javascript">
+	browser=navigator.userAgent;
+//	document.write(browser);
+	var Ergebnis = browser.search(/240x320+/);
+	if (Ergebnis != -1)
+	  browser="pocket";
+	else
+	  browser="desktop";
+function ReSize()
+{
+	if (browser != "pocket")
+	{
+		window.resizeTo(800, 600);
+	}
+}
+</script>
+<?php
+header("Cache-control: no-cache, must revalidate"); // IE 6 Fix.
+header("Pragma: no-cache");
+?>
+</head>
+<body onload="ReSize()">
+<table align='center'><tr><img src="trophy_top.gif" alt="Uwe Seeler Stiftung" border="0"></tr>
+<tr><td colspan="2"><img src="bild_trophy.jpg" width='100'></td><td WIDTH=100><h3>Herzlich Willkommen!</h3>
+<ul><li><a href="flight_l.php">Flight auswählen</a></li>
+</ul><small>Longest</small></td></tr>
+</table>
+<hr>
+<center><img src="intermec-logo.gif" width="300" alt="Intermec Expect More!" border="0"></center>
+</body>
+</html>
